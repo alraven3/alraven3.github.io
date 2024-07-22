@@ -1,10 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-.projects {
-  max-width: 700px;
-  margin: 0 auto;
-}
+
 .projects {
 	display:grid;
 	gap: 10px;
