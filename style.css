@@ -35,13 +35,14 @@ h2 {
 
 p {
 	font-family: 'quattrocento';
+	text-align: center;
 }
 
-.gallery {
+/* .gallery {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 .projects {
 	display:grid;
