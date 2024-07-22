@@ -1,22 +1,32 @@
 @font-face {
-	font-family: merryweatherBold;
-	src: url(./Merriweather-Bold.ttf);
+	font-family: 'merryweatherBold';
+	src: url('Font/Merriweather-Bold.ttf');
+  }
+
+@font-face {
+	font-family: 'quattrocento';
+	src: url('Font/Quattrocento-Regular.ttf');
   }
   
 h1 {
-	font-family: merryweatherBold;
+	font-family: 'merryweatherBold';
 }
+
+p {
+	font-family: 'quattrocento';
+}
+
 .projects {
 	display:grid;
 	gap: 10px;
 }
 
 .projects > div {
-  border: 2px solid rgb(233 171 88);
-  border-radius: 5px;
-  background-color: rgb(233 171 88 / 50%);
-  padding: 1em;
-  color: #d9480f;
+	border: 2px solid rgb(233, 171, 88); 
+	border-radius: 5px;
+	background-color: rgba(233, 171, 88, 0.5); 
+	padding: 1em;
+	color: #d9480f;
 }
 
 .project1{
