@@ -3,7 +3,7 @@
 	src: url(./Merriweather-Bold.ttf);
   }
   
-.h1 {
+h1 {
 	font-family: merryweatherBold;
 }
 .projects {
