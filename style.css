@@ -50,12 +50,6 @@ p {
 	font-family: 'quattrocento';
 }
 
-/* .gallery {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
-
 .projects {
 	display:grid;
 	grid-template-columns: 20ch 20ch;
