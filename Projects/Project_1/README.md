@@ -1,4 +1,4 @@
-# Circles
+# Components
 
 ![Project preview](./preview.png)
 
@@ -14,7 +14,7 @@ git clone https://github.com/higsch/svelte-d3-training.git
 cd svelte-d3-training
 
 // goto example project
-cd circles
+cd components
 
 // install the dependencies
 npm i

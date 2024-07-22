@@ -1,24 +1,47 @@
 <script>
-	const data = [
-		{ x: 155, y: 384, r: 20, fill: '#0000FF' },
-		{ x: 340, y: 238, r: 52, fill: '#FF0AAE' },
-		{ x: 531, y: 151, r: 20, fill: '#00E1FF' },
-		{ x: 482, y: 307, r: 147, fill: '#7300FF' },
-		{ x: 781, y: 91, r: 61, fill: '#0FFB33' },
-		{ x: 668, y: 229, r: 64, fill: '#D400FF' },
-	];
+	import { scaleLinear } from 'd3';
+
+	import Circle from './Circle.svelte';
+
+  let data = [];
+	setInterval(() => {
+		data = Array.from({ length: 1000 }).map(() => {
+			return {
+				a: Math.random(),
+				b: Math.random(),
+				r: Math.random(),
+				fill: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+					Math.random() * 255
+				})`,
+			};
+		});
+	}, 2000);
+
+	let width = 1000;
+	let height = 500;
+
+	$: xScale = scaleLinear().domain([0, 1]).range([0, width]);
+
+	$: yScale = scaleLinear().domain([0, 1]).range([height, 0]);
+
+	$: rScale = scaleLinear()
+		.domain([0, 1])
+		.range([5, width / 100]);
 </script>
 
-<main>
+<main
+	bind:clientWidth={width}
+	bind:clientHeight={height}
+>
 	<svg
-		width="1000"
-		height="500"
+		width={width}
+		height={height}
 	>
-		{#each data as { x, y, r, fill }}
-			<circle
-				cx={x}
-				cy={y}
-				r={r}
+		{#each data as { a, b, r, fill }}
+			<Circle
+				x={xScale(a)}
+				y={yScale(b)}
+				r={rScale(r)}
 				fill={fill}
 			/>
 		{/each}
@@ -26,11 +49,12 @@
 </main>
 
 <style>
-	svg {
-		background: #f3fff0;
+	main {
+		width: 100vw;
+		height: 100vh;
 	}
 
-	circle {
-		opacity: calc(708 / 1000);
+	svg {
+		background: #f3fff0;
 	}
 </style>
