@@ -1,4 +1,11 @@
-
+@font-face {
+	font-family: merryweatherBold;
+	src: url(https://github.com/google/fonts/blob/00f12e7673c0bd0f9abf5ff0869bba8c52a32e2f/ofl/merriweather/Merriweather-Bold.ttf);
+  }
+  
+.h1 {
+	font-family: merryweatherBold;
+}
 .projects {
 	display:grid;
 	gap: 10px;
