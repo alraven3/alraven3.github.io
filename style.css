@@ -28,6 +28,8 @@ p {
 
 .projects {
 	display:grid;
+	grid-template-columns: 20ch 20ch;
+  	grid-template-rows: 20ch 20ch;
 	gap: 10px;
 }
 
