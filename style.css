@@ -33,9 +33,13 @@ h2 {
 	text-align: center;
 }
 
-p {
+p #site_description {
 	font-family: 'quattrocento';
 	text-align: center;
+}
+
+p {
+	font-family: 'quattrocento';
 }
 
 /* .gallery {
