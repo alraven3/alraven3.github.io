@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'merryweatherBold';
-	src: url('Fonts/Merriweather-Bold.ttf');
+	src: url('./Fonts/Merriweather-Bold.ttf');
   }
 
 @font-face {
 	font-family: 'quattrocento';
-	src: url('Fonts/Quattrocento-Regular.ttf');
+	src: url('./Fonts/Quattrocento-Regular.ttf');
   }
   
 h1 {
