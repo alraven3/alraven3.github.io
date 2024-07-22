@@ -7,7 +7,12 @@
 	font-family: 'quattrocento';
 	src: url('./Fonts/Quattrocento-Regular.ttf');
   }
-  
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 h1 {
 	font-family: 'merryweatherBold';
 	width: 100%;
