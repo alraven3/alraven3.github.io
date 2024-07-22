@@ -10,6 +10,8 @@
   
 h1 {
 	font-family: 'merryweatherBold';
+	width: 100%;
+	text-align: center;
 }
 
 p {
