@@ -20,6 +20,7 @@ p {
 
 .projects {
 	display:grid;
+	font-family: 'quattrocento';
 	gap: 10px;
 }
 
