@@ -20,7 +20,6 @@ p {
 
 .projects {
 	display:grid;
-	font-family: 'quattrocento';
 	gap: 10px;
 }
 
@@ -30,6 +29,7 @@ p {
 	background-color: rgba(233, 171, 88, 0.5); 
 	padding: 1em;
 	color: #d9480f;
+	font-family: 'quattrocento';
 }
 
 .project1{
