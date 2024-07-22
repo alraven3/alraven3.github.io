@@ -26,6 +26,10 @@ p {
 	font-family: 'quattrocento';
 }
 
+.gallery {
+	justify-content: center;
+}
+
 .projects {
 	display:grid;
 	grid-template-columns: 20ch 20ch;
