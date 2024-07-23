@@ -1,8 +1,13 @@
 <script>
+	// @ts-ignore
 	import { scaleLinear } from 'd3';
 
 	import Circle from './Circle.svelte';
 
+  // @ts-ignore
+  /**
+     * @type {any[]}
+     */
   let data = [];
 	setInterval(() => {
 		data = Array.from({ length: 1000 }).map(() => {
