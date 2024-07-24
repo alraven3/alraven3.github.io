@@ -25,6 +25,11 @@ body {
   	padding-left: 50px;
 }
 
+.AB_link:link {
+	color:maroon;
+	text-decoration:none;
+	}
+
 h1 {
 	font-family: 'merryweatherBold';
 	/* width: 100%; */
