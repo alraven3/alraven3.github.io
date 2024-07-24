@@ -151,12 +151,9 @@
             .on("mouseover", function(event, d) {
                 d3.select(this).attr("fill", "orange");
 
-                var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.bandwidth() / 2;
-                var yPosition = parseFloat(d3.select(this).attr("y")) + 14;
-
                 // replace the above two lines with the two below to make the tooltip appear on/near the barchart area on a browser
-                // var xPosition = event.pageX + 5;
-                // var yPosition = event.pageY + 5;
+                var xPosition = event.pageX + 5;
+                var yPosition = event.pageY + 5;
 
                 d3.select("#tooltip")
                     .style("left", xPosition + "px")
