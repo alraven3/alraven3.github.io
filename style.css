@@ -58,8 +58,8 @@ p {
 
 .projects {
 	display:grid;
-	grid-template-columns: 20ch 20ch;
-  	grid-template-rows: 20ch 20ch;
+	grid-template-columns: 30ch 30ch;
+  	grid-template-rows: 21ch 21ch;
 	justify-content: center;
 	gap: 10px;
 }
