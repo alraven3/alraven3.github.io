@@ -79,13 +79,13 @@ p {
 }
 
 .project2{
-	grid-column: 1;
-	grid-row: 2;
+	grid-column: 2;
+	grid-row: 1;
 }
 
 .project3{
-	grid-column: 2;
-	grid-row: 1;
+	grid-column: 1;
+	grid-row: 2;
 }
 
 .project4 {
