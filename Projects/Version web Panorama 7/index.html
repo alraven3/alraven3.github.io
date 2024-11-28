@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama N°7</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <style>
+        body {
+            margin: 10px 150px 10px 150px;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        html, body {
+            padding: 0;
+        }
+        body {
+            min-height: 1280px;
+            color: #3b3b3b;
+            font-size: 14px;
+        }
+
+        h1, h2, p, a, ul {
+            font-family: "Ruda";
+            margin-bottom: .8rem;
+        }
+
+        h1 {
+            font-family: "Merriweather";
+            font-weight: bold;
+            font-size: 23px;
+            text-align: center;
+        }
+        .cit{
+            font-size: 15px;
+            margin-left: 13rem;
+            margin-right: 13rem;
+            text-align: center;
+        }
+        .cit_réf{
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        a {
+            color: teal;
+            text-decoration: none;
+        }
+
+        #palestine, #sahara, #outro {
+            background-color: antiquewhite;
+        }
+
+        #intro {
+            max-width: 40rem;
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        section {
+            padding: 1rem;
+        }
+
+        #scrolly, #scrolly-palestine, #scrolly-sahara-01, #scrolly-sahara-02,#scrolly-outro {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        #scrolly-palestine, #scrolly-sahara-01, #scrolly-sahara-02,#scrolly-outro {
+            background-color: antiquewhite;
+        }
+
+        #scrolly > *, #scrolly-palestine > *, #scrolly-sahara-01 > *, #scrolly-sahara-02 > *, #scrolly-outro > * {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        article {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        figure {
+            position: sticky;
+            top: 20px;  /* Keep it stuck to the top */
+            width: 100%; 
+            max-width: 100%;
+            z-index: 0;
+            transition: top 0.2s ease; /* Smooth transition for top */
+        }
+
+        figure img {
+            width: auto;
+            height: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        .step {
+            display: flex;
+            margin-bottom: 2rem;
+            padding: 0;
+            /* background-color: tan; */
+            color: black;
+            width: 100%;
+            max-width: 600px;
+            max-height: 200px;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        #scrolly-sahara-01 article {
+            max-width: 500px;
+        }
+        
+
+        @media (min-width: 840px) {
+            #scrolly > *, #scrolly-palestine > *, #scrolly-sahara-01 > *, #scrolly-sahara-02 > *, #scrolly-outro > * {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .step {
+                padding: 1rem;
+            }
+            .sahara-map{
+                max-width: 200px;
+            }
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .two-column-text {
+            display: flex;
+            justify-content: space-between; /* Distribute space between the items */
+            gap: 1rem;  /* Optional, adds spacing between the two paragraphs */
+            width: 100%; /* Make sure the container is full-width */
+        }
+
+        .two-column-text p {
+            /* flex: 1;  Each paragraph takes up equal space */
+            margin: 0;  /* Remove default margins */
+            text-align: left;
+            margin-bottom: .8rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+		<section id="intro">
+			<h1 class="intro__hed" style="font-size: 30px;">Vivre sans nationalité reconnue</h1>
+			<p class="intro__dek" style="font-size: 25px;">L'apatridie comme conséquence des dénis politiques</p>
+		</section>
+        <section>
+            <p class="cit"><i>« Tu n’es pas de là-bas, tu n’es pas d’ici. » De ces deux négations était née une génération décidée à défendre son existence, portée par l’odeur d’un pays qu’elle n’avait pas connu</i></p>
+            <p class="cit_réf">Mahmoud Darwich</p>
+        </section>
+        <section id="contents">
+            <p><a href="#édito">Edito – L’apatridie, entre instrument politique et bouée de sauvetage</a></p>
+            <p><a href="#scrolly">L'apatridie aujourd'hui: un bref état des lieux</a></p>
+            <p><a href="#palestine">Apatrides plutôt que réfugié·es? Les enjeux derrière le statut des  Palestinien·nes en Europe</a></p>
+            <p><a href="#kurdistan">La situation des minorités kurdes de Syrie et Turquie</a></p>
+            <p><a href="#sahara">Les Saharaoui·es: «sans nationalité», mais pas apatrides selon la Suisse?</a></p>
+            <p><a href="#sans-États">La création politique des «sans-États»</a></p>
+            <p><a href="#outro">Apatridie de fait: l’impasse de celles et ceux que personne ne reconnaît</a></p>
+            <p><a href="#brèves">Brèves et actualités</a></p>
+        </section>
+        <sectioni id="édito">
+            <h1>Edito – L’apatridie, entre instrument politique et bouée de sauvetage</h1>
+            <p>Avec le démantèlement des empires et l’avènement des États-Nations au 19e siècle, la notion de «frontière» et celle de «nationalité» deviennent des enjeux fondamentaux. Les territoires nationaux se rigidifient tout comme la définition de leurs ressortissant·es, le contrôle des entrées et des sorties devient drastique et sert à trier celles et ceux qui accèderont aux droits politiques, économiques et sociaux.</p>
+            <p>Dans ce contexte, les personnes sans nationalité deviennent une épine dans le pied des gouvernements. Sans pays d’origine reconnu, comment justifier de ne pas les prendre en charge? Vers quelle destination organiser leur renvoi?</p>
+            <h2>Sauver les apatrides: une Convention internationale</h2>
+            <p>Quelle que soit la raison qui ait conduit une personne à se trouver «sans-État» ou apatride, les conséquences de l’absence de nationalité sont toujours une restriction des droits, une impossibilité de faire entendre sa voix, une vie dans l’ombre. Les personnes sans-État, autant que les personnes réfugiées, sont donc en recherche d’une protection.</p>
+            <p>C’est après la Deuxième Guerre mondiale, qui a conduit des milliers de personnes sur les routes de l’exil ou en déchéance de nationalité, que les Nations-Unies adoptent deux textes qui auront pour objectifs de traiter séparément la situation des personnes réfugiées et celle des personnes sans nationalité.</p>
+            <p>Pour ces dernières, c’est la <a href="https://www.fedlex.admin.ch/eli/cc/1972/2320_2374_2150/fr">Convention de 1954 relative au statut des apatrides</a><sup><a href="#fn1" id="ref1">1</a></sup> qui s’applique, avec pour objectif de régulariser la situation juridique et le séjour des personnes expulsées de leur pays d’origine durant la guerre, mais qui n’étaient pas considérées comme réfugiées. Elle affirme que toute personne a droit à la nationalité et définit comme apatride «une personne qu’aucun Etat ne considère comme son ressortissant par application de sa législation». La Suisse ratifie cette Convention en 1972.</p>
+            <h2>L'épineuse question de celleux que l'on ne veut pas</h2>
+            <p>Au fil du 20e siècle, avec la chute de l’URSS, puis l’éclatement de la Yougoslavie, de nombreuses personnes se retrouvent dans la situation où aucun état européen ne veut les reconnaître. L’apatridie devient un phénomène de masse, touchant de plein fouet certaines communautés marginalisées. Dans ce dossier, nous abordons notamment la situation des personnes rroms (voir notre article sur les «Sans-état»).</p>
+            <p>On se trouve alors loin des intentions de la Convention de 1954, visant à diminuer le nombre de personnes sans nationalité. Au contraire, l’absence de nationalité devient une sanction<sup><a href="#fn2" id="ref2">2</a></sup> et un objectif, notamment pour lutter contre les personnes qui n’entrent pas dans le schéma sédentaire européen et mondial.</p>
+            <h2>Quand la loyauté coloniale prend le dessus</h2>
+            <p>Les décisions impactant le statut des personnes apatrides, y compris en Suisse, découlent souvent d’intérêts politiques internationaux et de la solidarité entre les puissances impérialistes. Ainsi, le refus de la Suisse de reconnaître l’État de Palestine ou du Sahara Occidental est un choix visant à ne pas s’opposer aux politiques israéliennes ou marocaines. Et préférer le statut d’apatridie plutôt que celui de réfugié·e aux victimes des régimes coloniaux revient précisément à ne pas reconnaitre le caractère politique de leur persécution (voir nos articles sur la Palestine et le Sahara Occidental).</p>
+            <h2>L'apatridie, un symptôme global?</h2>
+            <p>L’apatridie n’est pas vouée à disparaître ces prochaines années (voir encadré «L’apatridie aujourd’hui»). Inversement, les politiques européennes actuelles de fermeture participent à son renforcement. Car pour survivre aux frontières mortifères et à la machine à expulser d’une Europe qui se cloisonne, il ne reste aux personnes cherchant protection bien souvent que l’option de se délester de leur identité.</p>
+            <p>Sans parler de la catastrophe climatique en cours, qui s’apprête à provoquer la disparition d’états insulaires et détruire nombre de terres situées au niveau de la mer. Dans ce contexte, repenser le piège des frontières et des identités verrouillées jusqu’à l’étouffement apparaît la seule voie possible pour garantir le respect des droits de tou·tes.</p>
+        </section>
+        <!-- <section> pour l'état des lieux? -->
+        <h1>L'apatridie aujourd'hui: un bref état des lieux</h1>
+		<section id="scrolly">
+            <article>
+				<div class="step" data-step="1">
+					<p>Alors que l’année 2024 marque le 70e anniversaire de la Convention de l’ONU relative au statut d’apatride, le <a href="https://www.unhcr.org/ibelong/statelessness-around-the-world/">Haut-Commissariat des Nations Unies pour les réfugiés</a> (HCR) recense toujours au moins dix millions de personnes apatrides dans le monde. En Suisse, le nombre réel d’apatrides reste incertain, puisque certaines personnes ne sont pas identifiées en tant que telles.</p>
+				</div>
+                <div class="step" data-step="2">
+                    <p>Selon les statistiques du SEM, en décembre 2023, 1'181 personnes étaient enregistrées dans la catégorie apatrides, 275 dans celle des «sans nationalité», et 1'112 sous «État inconnu»<sup><a href="#fn3" id="ref3">3</a></sup>. Le HCR, dans une étude réalisée en 2018 sur l’apatridie en Suisse, a critiqué cette labellisation, car elle minimise l’ampleur du problème et parce que les personnes qui se retrouvent dans les catégories «sans nationalité» ou «État inconnu» sont coincées dans des statuts nettement plus précaires<sup><a href="#fn4" id="ref4">4</a></sup>.</p>
+                </div>
+				<div class="step" data-step="3">
+					<p>Malgré son adhésion en 1972 à la Convention de 1954, la protection des droits des personnes apatrides en Suisse reste lacunaire selon l’OSAR<sup><a href="#fn5" id="ref5">5</a></sup>, notamment en ce qui concerne la définition de leur statut, la reconnaissance de leurs droits procéduraux ainsi que la protection qui leur est accordée. La pratique suisse demeure plus restrictive que celle prévue par la Convention: les autorités excluent du statut d’apatride des personnes qui auraient «volontairement renoncé à leur nationalité», alors que la Convention ne donne comme seul critère décisif le fait de savoir si la personne est considérée ou non comme ressortissante par le pays concerné.</p>
+				</div>
+			</article>
+
+			<figure>
+				<!-- <p>0</p> -->
+                 <img src="./media/Moulud Yeslem.jpg">
+			</figure>
+		</section>
+		<section id="palestine">
+            <h1>Apatrides plutôt que réfugié·es? Les enjeux derrière le statut des  Palestinien·nes en Europe</h1>
+            <h2>Les Palestinien∙nes exclu·es des conventions</h2>
+            <p>Une grande partie des Palestinien∙nes, expulsé∙es de chez elleux lors de la création d’Israël en 1948, ont été inscrit∙es auprès de l’UNRWA <i>(voir l’encadré “Un bref rappel historique”)</i>. Cette affiliation a été accompagnée de leur exclusion de la Convention sur les réfugiés (CR) et de celle sur l’apatridie. À l’époque, l’enjeu était de ne pas enterrer le droit au retour des Palestinien·nes et la revendication d’une nationalité palestinienne. L’exclusion était aussi liée au fait que la situation des réfugié∙es palestinien∙nes était perçue comme temporaire et ne pouvait pas être assimilée à celles de réfugié∙es au long terme.</p>
+            <p>Mais la situation a perduré et, 50 ans plus tard, nombre de Palestinen∙nes cherchant une protection se heurtent à l’obstacle de la clause d’exclusion:</p>
+            <p><i>C’est ce qu’expérimente Bashir*, originaire de la bande de Gaza, lorsqu’il demande l’apatridie en Suisse en 2016 puis l’asile en Allemagne en 2017: les deux États lui refusent ses demandes au motif que son enregistrement auprès de l’UNRWA l’exclut des Conventions correspondantes.</i><sup><a href="#fn6" id="ref6">6</a></sup></p>
+            <p>Toutefois, la CR précisait aussi que si l’assistance de l’UNRWA venait à cesser, ses bénéficiaires devraient directement être reconnu·es comme réfugié·es. Le problème qui se pose est donc de savoir à quelles conditions l’assistance de l’UNRWA peut-elle être considérée comme ayant cessé. Dans le cas de Bashir*, le fait que son accès concret à l’UNRWA n’était plus possible parce qu’il ne pouvait pas retourner dans le pays où l’agence opère n’a pas été considéré comme déterminant.</p>
+            <h2>Réfugié∙es palestinien∙es: bref rappel historique</h2>
+            <p>Aujourd’hui, 9,1 millions de Palestinien∙nes, soit 70% de la population, sont des réfugié∙es. Cela en fait la plus grande population réfugiée au monde. Comment en est-on arrivé là?</p>
+            <section id="scrolly-palestine">
+                <article>
+                    <div class="step" data-step="1" style="max-height: 50px;">
+                        <p>Au 20e siècle, deux déplacements forcés ont eu lieu:</p>
+                    </div>
+                    <div class="step" data-step="2" style="max-height: 50px;">
+                        <ul>
+                            <li>En 1948, la création unilatérale d’Israël sur 78 % du territoire de la Palestine a entrainé l’expulsion de près de 900 000 Palestinien∙nes de leurs terres.</li>                            
+                        </ul>
+                    </div>
+                    <div class="step" data-step="3" style="max-height: 50px;">
+                        <ul>
+                            <li>En 1967, l’occupation par Israël de la Cisjordanie et de la bande de Gaza, ainsi que du Golan syrien et du Sinaï égyptien, s’est à nouveau soldée par l’expulsion de centaines de milliers de Palestinien∙nes.</li>
+                        </ul>
+                    </div>
+                    <div class="step" data-step="4">
+                        <p>Suite à la première <i>Nakba</i><sup><a href="#fn7" id="ref7">7</a></sup>, une agence spéciale des Nations unies est créée en 1949, l'UNRWA<sup><a href="#fn8" id="ref8">8</a></sup>, avec pour mandat de fournir des services de base aux réfugié∙es palestinien∙nes dans 5 zones:  la bande de Gaza, la Cisjordanie, la Jordanie, la Syrie et le Liban.</p>
+                    </div>
+                    <div class="step" data-step="5">
+                        <p>À l’heure actuelle, 6 millions de réfugié∙es palestinien∙nes<sup><a href="#fn9" id="ref9">9</a></sup> sont enregistré·es auprès de l’agence, dont 42% en Cisjordanie et dans la bande de Gaza, 40% en Jordanie, 10% en Syrie et 8% au Liban.  Dans ces pays voisins, leurs situations juridiques – et les droits qui en découlent – varient considérablement<sup><a href="#fn10" id="ref10">10</a></sup>.</p>
+                    </div>
+                </article>
+                <figure>
+                    <img src="./media/pdfresizercom-pdf-crop_14-page-001.jpg">
+                </figure>
+            </section>
+            <h2>Nouvelle jurisprudence: une brèche vers l'apatridie</h2>
+            <p>En 2021, le Tribunal fédéral opère un changement de jurisprudence.</p>
+            <p><i>Lorsqu’Emad*, Palestinien de Syrie, se voit refuser la qualité de réfugié en 2015, il dépose une demande d’apatridie. Sa requête est acceptée par le Tribunal fédéral en 2021: la plus haute instance judiciaire de Suisse décrète en effet qu’en cas de perte effective de la protection de l’UNRWA, les personnes doivent se voir reconnaître le statut d’apatride<sup><a href="#fn11" id="ref11">11</a></sup>. Cela inclut les personnes dont le retour a été reconnu inexigible, comme c’est le cas d’Emad*.</i></p>
+            <p>Avec cet arrêt, mais surtout depuis un nouvel arrêt de la Cour de justice de l’UE, la protection de l’UNRWA est considérée comme ayant cessé lorsqu’une personne quitte le pays où elle en bénéficiait et ne peut y retourner pour des raisons indépendantes de sa volonté. Il faut en outre qu’elle n’ait pas de lien avec un autre pays où l’agence opère. La protection prend également fin si l’UNRWA n’a plus les capacités matérielles d’assumer sa mission, lorsqu’elle ne peut plus assurer «des conditions de vie dignes ou des conditions minimales de sécurité»<sup><a href="#fn12" id="ref12">12</a></sup>.</p>
+            <p>Les autorités suisses ont récemment reconnu l’apatridie à des ressortissant·es gazaoui·es pour ce motif, l’impossibilité de fonctionnement de l’UNRWA dans le contexte actuel y étant évidente. De son côté, le TAF a également reconnu que les coupes budgétaires imposées à l’agence mettent en péril son fonctionnement dans ses autres zones d’intervention. Ainsi, reconnaissant le rôle central de cette dernière pour les personnes qui en dépendent, le Tribunal a, en 2024, ordonné la suspension du renvoi d’un Palestinien réfugié au Liban:</p>
+            <p><i>Tareq*, Palestinien du Liban, a vu la décision de son renvoi être suspendue par le TAF en mai 2024<sup><a href="#fn13" id="ref13">13</a></sup>. Estimant que l'UNRWA assume une fonction similaire à celle d'un gouvernement<sup><a href="#fn14" id="ref14">14</a></sup>, le tribunal a jugé nécessaire d’évaluer si l’agence au Liban était toujours opérationnelle, compte tenu de la suspension de son financement par plusieurs États. En cas contraire, cela devrait ouvrir la voie à une reconnaissance d’apatridie pour Tareq*.</i></p>
+            <h2>L’apatridie: un moyen de dissimuler les persécutions?</h2>
+            <p>La reconnaissance de l’apatridie n’est pas moindre puisque ce statut s’accompagne automatiquement d’un permis de séjour en Suisse, d’un document de voyage et, pour les enfants, d’un droit à la naturalisation facilitée. Si cette brèche juridique est à saluer, on peut toutefois regretter que la Suisse reconnaisse le statut d’apatride plutôt que celui de réfugié∙e, comme le préconisent pourtant les instances internationales. Car, comme le souligne l’avocate Mélanie Le Verger, cela revient à ne pas reconnaître l’aspect politique de la persécution: alors que le statut de réfugié∙e signifierait que «les Palestinien·nes dans la bande de Gaza risquent des persécutions parce qu’iels sont Palestinien·nes», l’apatridie est un moyen «de ne pointer du doigt personne»<sup><a href="#fn15" id="ref15">15</a></sup>.</p>
+            <h2>Et pour celleux qui n’ont pas accès à l’UNRWA?</h2>
+            <p>Faire dépendre l’octroi d’un statut à l’accès à l’UNRWA est également problématique en raison de la limitation du mandat de cette dernière. D’une part, un nombre important de Palestinien∙nes n’ont jamais été enregistré∙es auprès de l’agence<sup><a href="#fn16" id="ref16">16</a></sup>, notamment les personnes qui ont fui après 1949 ou se sont rendues dans une zone hors du mandat de l’UNRWA.</p>
+            <p>D’autre part, cela laisse de côté la question des près de deux millions de «Palestinien∙nes de 1948», celles et ceux qui vivent dans les frontières intérieures d’Israël et en ont reçu la nationalité. Bien que la plupart soient des déplacé∙es internes, iels ne sont pas réfugié∙es au sens de l’UNRWA. Pourtant, iels sont traité∙es comme des citoyen∙nes de deuxième catégorie et ne bénéficient pas des droits que devrait garantir une nationalité<sup><a href="#fn17" id="ref17">17</a></sup>. En février 2023, le parlement israélien a par ailleurs approuvé un projet de loi qui renforce un amendement de 2008 permettant la révocation de la nationalité israélienne pour «abus de confiance ou déloyauté envers l'État»<sup><a href="#fn18" id="ref18">18</a></sup>. Une décision qui fait craindre une augmentation des situations d’apatridie chez les citoyen∙nes palestinien∙nes.<sup><a href="#fn19" id="ref19">19</a></sup></p>
+            <p>Enfin, les discriminations à leur égard ne cessent d’empirer depuis le 7 octobre 2023, au point que le Royaume-Uni a, pour la première fois, octroyé l’asile à un Palestinien détenteur de la citoyenneté israélienne<sup><a href="#fn20" id="ref20">20</a></sup>. Une décision qui marque un tournant: peut-être le signal d’une ouverture européenne et suisse à la reconnaissance de la persécution des personnes palestiniennes?</p>
+        </section>
+
+        <section>
+            <img src="./media/Palestinian Beauty_Ziada-Nour (1).png" style="width:400px;height:500px;" class="center">
+        </section>
+        <section id="kurdistan">
+            <h1>La situation des minorités kurdes de Syrie et Turquie</h1>
+            <p>Les Kurdes représentent un groupe particulièrement exposé au risque d'apatridie. Cette courte contribution analyse en particulier la situation des Kurdes en Syrie et en Turquie, ainsi que la pratique suisse à leur égard.</p>
+            <div class="two-column-text">
+                <div class="left">
+                    <h2>Syrie - Contexte historique</h2>
+                    <p>À la suite d'un recensement exceptionnel effectué par le gouvernement syrien en 1962, environ 120 000 Kurdes résidant dans le gouvernorat de Hassaké, au nord-est du pays, ont été rendus apatrides presque du jour au lendemain et divisés en deux groupes distincts: les personnes qui ont participé au recensement de 1962, mais n'ont pas convaincu les autorités qu'elles résidaient en Syrie avant 1945 ont été considérées comme des Ajanib (« étrangers ») ; celles qui n'ont pas participé du tout au recensement constituaient le deuxième groupe – les Maktumin («ceux qui sont cachés/silencieux»). Les Maktumin jouissent d’encore moins de droits que les Ajanib, ne pouvant pas voyager dans le reste de la Syrie sans autorisation spéciale. </p>
+                    <p>Les Kurdes apatrides font face à de nombreuses restrictions, telles qu’un accès limité à l'éducation, aux soins de santé, à la liberté de circulation, à la propriété, à la participation aux systèmes judiciaire et politique, ainsi qu’à l'enregistrement des entreprises, des mariages et des enfants.</p>
+                    <p>En avril 2011, alors que des manifestations antigouvernementales se propageaient à travers le pays, un décret présidentiel annonçait des instructions pour naturaliser les «étrangers» de Hassaké. Il a été rapporté qu'à la mi-2013, 104’000 Kurdes avaient acquis la citoyenneté syrienne. Bien que le décret ne prévoyait pas explicitement la naturalisation des Kurdes maktumin, environ 50’000 d’entre elleux ont quand même pu obtenir la nationalité syrienne, notamment en s’enregistrant comme Ajanib dans le registre de la province de Hassaké<sup><a href="#fn21" id="ref21">21</a></sup>. </p>
+                    <p>Aucune statistique officielle n’a été publiée ces dernières années, mais le HCR estime que la Syrie compte encore environ 160 000 apatrides, dont la grande majorité serait composée de Kurdes<sup><a href="#fn22" id="ref22">22</a></sup>.</p>
+                    <h2>Pratique suisse</h2>
+                    <p>Le TAF exclut que les Maktumin et les Ajanib fassent l'objet d'une persécution collective en Syrie. Cela signifie que s'iels veulent obtenir l'asile, les membres de ces communautés doivent prouver qu'iels courent le risque d'être soumis à une persécution individuelle ciblée fondée sur l'un des motifs pertinents de la CR.</p>
+                    <p>Le TAF a cependant admis au fil du temps que l'octroi de la nationalité syrienne aux personnes ajanib n'est pas automatique et que les personnes concernées doivent se présenter personnellement aux bureaux d'enregistrement pour demander la citoyenneté. Comme les tribunaux reconnaissent que c’est impossible pour les personnes avec un statut de protection en Suisse<sup><a href="#fn23" id="ref23">23</a></sup>, ces dernières peuvent par conséquent être reconnues comme apatrides.</p>
+                    <p>C’est la situation qu’a vécue Afrin*, qui a dû faire recours auprès du TAF concernant la décision du SEM lui refusant l’apatridie. Le TAF a reconnu en 2021 que son choix de ne pas demander la nationalité en Syrie pour ne pas être enrôlé dans l’armée alors que la guerre faisait rage était un motif valable.<sup><a href="#fn24" id="ref24">24</a></sup></p>
+                    <p>La situation des Maktoumin est toutefois plus complexe, car iels ne disposent pas de documents d’identité. Pour prouver celle-ci, iels doivent obtenir une attestation spéciale, appelée certificat de reconnaissance, délivrée par le mukhtar (chef de village). Les Maktoumin doivent ainsi prouver un lien avec le même État qui a refusé de les reconnaître comme citoyen·nes. Un tel certificat peut être difficile à obtenir et n'est pas toujours considéré comme une preuve suffisante par le TAF en raison de sa falsification facile. L’incapacité à identifier dès le départ le statut d’apatride des Maktoumin aboutit souvent à des situations de vide juridique et administratif, ainsi qu’à l’exclusion socio-économique des personnes concernées.<sup><a href="#fn25" id="ref25">25</a></sup></p>
+                    <p>Dans plusieurs situations, le TF a cassé des décisions du SEM et du TAF, jugées trop restrictives en ce qui concerne l’accès à l’apatridie de personnes kurdes. C’est le cas pour Aryian* en 2021<sup><a href="#fn26" id="ref26">26</a></sup> et Akar* en 2024<sup><a href="#fn27" id="ref27">27</a></sup>. Dans les deux cas, le TF a reconnu l’absence de nationalité des recourants, ainsi que leur impossibilité de se rendre actuellement en Syrie et le fait qu’on ne pouvait raisonnablement leur demander d’attendre un possible retour pour en acquérir une.</p>
+                </div>
+                <div class="right">
+                    <h2>Turquie - Contexte historique</h2>
+                    <p>L'année 1984 a marqué le début du conflit armé opposant les forces de sécurité turques et le <i>Parti des travailleurs du Kurdistan</i> (PKK), une organisation politique militante kurde. Au mois de juillet 1987, l'état d'urgence a été instauré dans dix provinces du Kurdistan turc, dont la province de Sirnak. Dans ce contexte, les actions des forces de sécurité turques ont été accompagnées de nombreux abus, y compris des exécutions extrajudiciaires. La destruction de milliers de villages kurdes, ainsi que les affrontements meurtriers entre le PKK et l'armée turque ont entrainé, entre 1984 et 1995, la mort de dizaines de milliers de personnes et le déplacement de 275 000 à 2 millions de Kurdes de la Turquie vers l’Irak.</p>
+                    <p>Aujourd’hui encore, des milliers de Kurdes qui ont dû se réfugier en Irak vivent dans des camps, comme celui de Makhmour, qui sont devenus des lieux de vie permanents. Sans accès à la citoyenneté irakienne ou à un droit de résidence, ces personnes ont des droits limités, et leurs enfants naissent apatrides<sup><a href="#fn28" id="ref28">28</a></sup>. En raison précisément de leur genèse, nombre de ces camps de réfugiés sont fortement liés au PKK.</p>
+                    <h2>Pratique suisse</h2>
+                    <p>Cette proximité des camps avec le PKK entraîne, selon la pratique suisse, un risque important de persécution liée à l'asile pour les personnes qui y résident, si elles retournent en Turquie. Certains arrêts du TAF vont jusqu'à considérer que ce n'est pas tant l'activité individuelle ou le profil personnel de la personne qui est déterminant, mais plutôt la manière dont son origine et son appartenance familiale vont être perçues par les autorités turques. Dans d'autres arrêts, le TAF a considéré que le fait d'être originaire du camp de Makhmour en Irak pouvait entraîner un risque de poursuites pénales et de persécutions en cas de retour en Turquie. Dans toutes ces affaires, le Tribunal a accordé l'asile aux requérant·es.</p>
+                    <p>Il convient de noter que dans ces affaires, contrairement à celles concernant les Kurdes syrien·nes, la nationalité turque des requérant·es n'a jamais été contestée. La question se pose cependant de savoir si un État qui force un groupe de personnes à vivre en dehors de ses frontières nationales pendant des générations considère réellement ces personnes comme ses citoyen·nes ...et donc si celles-ci ne devraient pas être reconnues comme apatrides en plus d’êtres réfugiées.</p>
+                </div>
+            </div>
+            <p>Lucia Della Torre, OSAR</p>
+        </section>
+		<section id="sahara">
+            <h1>Les Saharaoui·es: «sans nationalité», mais pas apatrides selon la Suisse?</h1>
+            <section id="scrolly-sahara-01">
+                <article>
+                    <div class="step" data-step="1">
+                        <p><i>Né au SO, Aju* est arrêté et torturé pendant cinq ans par le Maroc pour avoir participé à une manifestation en faveur de l’indépendance de son pays. Relâché grâce à la pression internationale, il arrive en Suisse en 1998 et demande l’asile, qu’il obtient. Sur son permis est indiquée la nationalité «sahraouie».</i></p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <p><i>En 2019, le Service de la population du canton de Fribourg indique à Aju* et à ses enfants qu’ils ont à présent la nationalité marocaine. Aju* demande une rectification, refusant de recevoir la nationalité d’un État qui l’a torturé. Le Secrétariat d’État aux migrations (SEM) lui répond alors qu’il admet sa provenance du SO, mais que, comme la Suisse ne reconnaît pas ce pays, les personnes qui en sont originaires prennent automatiquement la nationalité marocaine depuis le 1er octobre 2018. Après plusieurs échanges, le SEM propose de revenir à la qualification «sans nationalité», ce qui déchoit Aju* et sa famille de leur nationalité sahraouie.</i></p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <p><i>Aju* dépose un recours auprès du TAF, qu’il perd, puis auprès du TF. Mais en 2021, ce dernier valide la pratique du SEM d’enregistrer les personnes du SO comme «sans nationalité», tout en soulignant que cela ne conduit pas à une situation d’apatridie.<sup><a href="#fn29" id="ref29">29</a></sup></i></p>
+                    </div>
+                </article>
+                <figure>
+                    <p>Le territoire du Sahara Occidental (SO) est majoritairement colonisé par le Maroc, un mur séparant la partie occupée de la zone libérée. Toutefois, la plupart des pays du monde, dont la Suisse, ne reconnaissent pas l’existence de cet État. Par ailleurs, une grande partie de la population sahraouie a dû fuir l’occupation et se trouve réfugiée depuis des années en Algérie, dans des camps aux conditions de vie très précaires (voir encadré historique).</p>
+                    <p>Pour les personnes originaires du SO qui arrivent en Suisse, la possibilité d’obtenir l’asile n’est possible que si la persécution par le Maroc peut être démontrée. C’est ce qu’est parvenu à faire Aju*. Mais, paradoxalement, il a fait le constat amer d’un changement de pratique des autorités: bien que ses fils et lui-même soient reconnus comme Sahraouis réfugiés, en 2018 leur origine est supprimée et ils se voient accoler l’étiquette «sans nationalité». Pire encore, en 2019, les autorités cantonales les enregistrent sous la nationalité marocaine.</p>
+                </figure>
+            </section>
+            <h2>Quand la Suisse déchoit une nationalité</h2>
+            <p>Il est pour le moins surprenant de constater que la Suisse peut admettre la provenance d’une personne, mais lui en refuser l’origine, pour un motif purement politique. Aju* paie-t-il le prix du choix de la Suisse de ne pas reconnaître une population oppressée et de ne pas s’opposer à un État colonisateur? En effet, les conséquences sont lourdes pour Aju*, qui doit d’abord se battre pour ne pas être affublé de la nationalité d’un État qui l’a persécuté, puis subir une déchéance de nationalité.</p>
+            <p>La précision du TF indiquant que cette absence de nationalité ne signifie pas l’obtention de l’apatridie interroge également. N’est-ce pas contraire au principe de la Convention de 1954, qui vise l’identification et la réduction du nombre d’apatrides<sup><a href="#fn30" id="ref30">30</a></sup> ?</p>
+            <h2>Bref historique du Sahara Occidental</h2>
+            <section id="scrolly-sahara-02">
+                <article>
+                    <div class="step" data-step="1" style="width: 400px;">
+                        <p>Considéré par l’ONU comme l’un des derniers «territoires non-autonomes» au monde, le Sahara occidental (SO) est situé au cœur de l’Ouest saharien (voir carte ci-dessous, entre l’océan Atlantique, les fleuves Niger et Sénégal et au nord les reliefs de l’Atlas).</p>
+                    </div>
+                    <div class="step" data-step="2" style="width: 400px;">
+                        <p>Contre l’occupation de l’Espagne, présente depuis le 19ème siècle, un mouvement de décolonisation révolutionnaire se forme à la fin des années 50, organisé en un Front populaire pour la libération de la Saguia El Hamra et du Rio de Oro (Front Polisario).</p>
+                    </div>
+                    <div class="step" data-step="3" style="width: 400px;">
+                        <p>En 1975, l’Espagne cède le territoire au Maroc et à la Mauritanie, contre l’avis de la Cour de La Haye qui affirme le droit à l’autodétermination des Sahraoui·es. Le Maroc occupe le pays illégalement et y fait construire un mur, achevé en 1987, pour en exploiter les ressources côtières et terrestres. D’autres pays européens en profitent largement, leurs entreprises continuant d’investir au SO et de piller les ressources<sup><a href="#fn31" id="ref31">31</a></sup>. De l’autre côté du mur, la partie libérée est gouvernée par le Front Polisario qui appelle à la création de la République arabe sahraouie démocratique (RASD).</p>
+                    </div>
+                    <div class="step" data-step="4" style="width: 400px;">
+                        <p>Depuis lors, le Front Polisario et la population contestent la présence coloniale marocaine et subissent une forte répression. Des centaines de milliers de Sahraoui·es ont été expulsé·es par la force dans les années 1970. La majorité de la population vit désormais en Algérie, sur la plaine de Tindouf dans des camps de réfugié·es, aux conditions de vie extrêmement difficiles, en attente d’une solution.</p>
+                    </div>
+                    <div class="step" data-step="5" style="width: 400px;">
+                        <p>En 1991, un cessez-le-feu est décrété et l’ONU promet au peuple un référendum sur la question de leur indépendance. Le MINURSO (Mission des Nations unies pour l’organisation d’un référendum au Sahara occidental) est constitué afin d’encadrer ce scrutin. Mais à la suite d’une opposition du Maroc, le référendum n’aura jamais lieu. La situation géopolitique n’a depuis plus évolué : le Maroc occupe 80% du territoire et la RASD 20%. Seule une cinquantaine de pays ont reconnu la RASD<sup><a href="#fn32" id="ref32">32</a></sup>.</p>
+                    </div>
+                </article>
+                <figure>
+                    <!-- <p>Carte du Sahara Occidental (2018)</p> -->
+                    <img src="./media/sahara-occ-map.png" class="sahara-map">
+                    <!-- <p>Source: <a href="www.axl.cefan.ulaval.ca/afrique/Sahara-occidental.htm">www.axl.cefan.ulaval.ca/afrique/Sahara-occidental.htm</a></p> -->
+                </figure>
+            </section>
+            <h2>Obtenir l'apatridie: un parcours du combattant</h2>
+            <p>Obtenir l’apatridie lorsque l’on est originaire du Sahara Occidental se révèle extrêmement compliqué. Faska* l’a découvert à ses dépens.</p>
+            <p>Faska* est né dans un camp de réfugié·es en Algérie. Il se forme comme infirmier, mais n’a pas de perspectives professionnelles. Il arrive en Suisse et demande l’asile en 2019. En 2021, le SEM refuse sa demande, au motif qu’il n’aurait pas subi de persécutions.</p>
+            <p>Ayant entamé une procédure de demande d’apatridie<sup><a href="#fn33" id="ref33">33</a></sup>, le renvoi de Faska* est suspendu. Mais sa demande reste en suspens durant près de trois ans, le SEM refusant de se prononcer malgré de nombreuses relances du mandataire de Faska*. Alors, ce dernier saisit le TAF pour déni de justice. Le SEM explique son retard par le fait qu’il s’agit d’une «question juridique, mais également politique, le SO n’étant pas autonome». Un argument refusé par le TAF qui admet le déni de justice. Sommé de répondre, le SEM reconnaît enfin l’apatridie de Faska* en avril 2023<sup><a href="#fn34" id="ref34">34</a></sup>.</p>
+            <p>Comme Aju*, Faska* subit les conséquences d’un choix politique, de l’aveu même du SEM. Alors que le SO n’est pas reconnu par la Suisse comme un État, comment expliquer que les autorités refusent ou laissent simplement sans réponse leurs demandes d’apatridie?</p>
+            <h2>Un paradoxe lourd de conséquences</h2>
+            <p>La problématique du SO montre bien tout l’enjeu politique des questions d’apatridie. L’impasse suisse consistant à refuser de reconnaître le SO en tant qu’État et à déchoir des personnes de leur nationalité, va à l’encontre des recommandations des Nations Unies: la Suisse crée des apatrides, tout en rechignant à leur reconnaître juridiquement ce statut.</p>
+            <p>Le paradoxe est lourd de conséquences, d’abord pour les familles sahraouies qui vivent en Suisse, puisqu’elles ne peuvent pas jouir des droits attachés au statut d’apatride (l’octroi d’un permis de séjour stable notamment). Lourd de conséquences aussi pour la population sahraouie, à qui il est refusé de pouvoir transmettre leur nationalité aux générations futures. Reléguée dans la catégorie réfugié·es sans nationalité ou apatrides de fait par le funeste jeu géopolitique, cette population est privée d’un État et d’une identité, ce qui rend toute possibilité de résistance face à l’occupation extrêmement compliquée<sup><a href="#fn35" id="ref35">35</a></sup>. N’est-ce pas là rendre inaudibles leurs voix?</p>
+            <p>Aude Martenot, ODAE romand</p>
+        </section>
+        <section id="sans-États">
+            <h1>La création politique des «sans-États»</h1>
+            <p>Rarement fruit du hasard, la perte de nationalité apparait bien souvent dans l’histoire comme un objectif politique délibéré. Comme le souligne Emmanuel Decaux<sup><a href="#fn36" id="ref36">36</a></sup>, à la suite de la Première Guerre mondiale «l’apatridie n’est plus un simple accident de l’histoire, une anomalie juridique dans la répartition des sujets entre les États […], ce n’est plus une lacune du droit, c’est une politique de l’État»<sup><a href="#fn37" id="ref37">37</a></sup>.</p>
+            <h2>L’État-nation : une construction basée sur l’exclusion</h2>
+            <p>Au début du 20ème siècle, le démembrement de l’Empire austro-hongrois a engendré de nombreuses pertes de nationalité pour les habitant∙es des nouveaux États qui lui ont succédé, en particulier pour les minorités ne remplissant pas les critères des nouvelles identités nationales. Les nouveaux régimes autoritaires qui apparaissent en Europe vont également procéder à des déchéances collectives de nationalité, visant des minorités (religieuses, nationales, culturelles) ou des opposant·es politiques.</p>
+            <p>Ce phénomène de création d’apatridie de masse se répétera en Europe, notamment à la suite de l’éclatement de l’URSS, puis de la Yougoslavie: «les États successeurs de la Yougoslavie ont chacun adopté leur propre droit de la nationalité fondé sur le jus sanguinis et inspiré de considérations politiques ethno-nationalistes, les minorités ne se référant pas à une ‘mère patrie’ se sont retrouvées purement et simplement exclues», explique l’avocate Maylis de Verneuil<sup><a href="#fn38" id="ref38">38</a></sup>. La communauté rrom sera particulièrement impactée par ces élans nationalistes.</p>
+            <h2>Les discriminations renforcent l'apatridie: l'exemple rom</h2>
+            <p>Aujourd’hui, la plupart des personnes apatrides en Europe sont membres de la communauté rrom. Et cela découle précisément du fait que, bien que constituant la plus grande minorité d’Europe (environ 12 millions de personnes<sup><a href="#fn39" id="ref39">39</a></sup>), elle est également l’une des plus marginalisées. Car apatridie et discriminations sont étroitement liées.</p>
+            <p>D’une part, la plupart des autorités des pays nés de l’ex-Yougoslavie ont cherché à remettre en question l’appartenance à leur État des personnes rroms<sup><a href="#fn40" id="ref40">40</a></sup>. La Slovénie a par exemple été condamnée par la Cour européenne des droits humains (CourEDH) en 2010 pour avoir effacé 26 000 personnes, en grande majorité issue de la communauté rrom<sup><a href="#fn41" id="ref41">41</a></sup>, du registre de ses habitant∙es, au motif qu’elles n’avaient pas déposé une demande de nationalité avant une date butoir.</p>
+            <p>D’autre part, les nouveaux États ont conditionné l’accès à leur nationalité à des exigences difficiles à remplir, comme fournir une preuve de résidence permanente dans le territoire avant le démantèlement de la Yougoslavie<sup><a href="#fn42" id="ref42">42</a></sup>.   À cela s’ajoute le fait que de nombreuses personnes rroms rapportent éviter autant que possible les démarches administratives, par crainte de la maltraitance des fonctionnaires, ce qui perpétue le non-enregistrement des naissances<sup><a href="#fn43" id="ref43">43</a></sup>.</p>
+            <p>C’est également en raison des discriminations subies sur le marché du travail yougoslave que de nombreux Rroms avaient émigré vers l’Europe occidentale dans les années 1970. Or, ces émigré∙es se sont retrouvé∙es, à la disparition de la Yougoslavie, avec un passeport caduc et nombre d’entre elleux n’ont jamais eu les moyens de réaliser les démarches pour obtenir des papiers d’un des nouveaux États<sup><a href="#fn44" id="ref44">44</a></sup>.</p>
+            <h2>Ni citoyen·nes ni apatrides: la conséquence d’un déni juridique</h2>
+            <p>Bien que la prévalence de l’apatridie au sein de la population rrom soit reconnue par les autorités de l’Union européenne, qui affirment pourtant vouloir y remédier, le statut juridique d’apatride lui est encore largement inaccessible.</p>
+            <p>Dans la plupart des États européens, dont la Suisse, la personne qui demande à être reconnue apatride doit prouver qu’elle a effectué, en vain, toutes les démarches possibles pour obtenir la nationalité du pays dont elle pourrait être originaire. Dans le cas des personnes rroms d’ex-Yougoslavie, cela signifie donc obtenir des attestations de non-nationalité de la part des autorités des huit États qui lui ont succédé<sup><a href="#fn45" id="ref45">45</a></sup>. Avec à chaque fois son lot de procédures, de taxes et de documents à fournir. Autant dire qu’avec des moyens financiers limités ou un réseau inexistant sur place, ces démarches sont pratiquement impossibles à réaliser.</p>
+            <p>Or, se voir reconnaître le statut d’apatride est une condition préalable obligatoire pour pouvoir prétendre à un titre de séjour et partant, à un accès aux droits sociaux, politiques, éducatifs et de santé.</p>
+            <p>Elisa Turtschi, ODAE romand</p>
+        </section>
+        <section>
+            <p class="cit"><i>Sans papiers d'identité, je ne me sens pas complet</i></p>
+            <p class="cit_réf">Salih*</p>
+        </section>
+		<section id="outro">
+            <h1>Apatridie de fait: l’impasse de celles et ceux que personne ne reconnaît</h1>
+            <section id="scrolly-outro">
+                <article>
+                    <div class="step" data-step="1">
+                        <p>Dans un article publié en février 2024<sup><a href="#fn46" id="ref46">46</a></sup>, la chercheuse Cecilia Manzotti<sup><a href="#fn47" id="ref47">47</a></sup> soutient que l’interdiction ou l’empêchement fait à une personne d'entrer sur le territoire dont elle se revendique originaire, devrait ouvrir le droit pour cette dernière à la reconnaissance d’apatridie. Une perspective qui permettrait à bon nombre de personnes de sortir d’une impasse juridique.</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <p>Pour Manzotti, la nationalité, en tant que concept juridique, établit un lien particulier entre un individu et un État. Le territoire étant une composante essentielle de l’État, ce lien inclut le droit, pour l’individu, d'y entrer et d’y résider – droit qui est d’ailleurs reconnu par plusieurs traités internationaux sur les droits humains. Et si l’accès au territoire est inhérent à la nationalité, il s'ensuit qu’à «chaque fois que les autorités consulaires, directement ou indirectement, empêchent arbitrairement une personne d'entrer sur le territoire de l'État, leur comportement doit être considéré comme une preuve que l'État ne considère pas la personne comme son ressortissant<sup><a href="#fn48" id="ref48">48</a></sup>.» Cela inclut, nous dit Manzotti, le refus injustifié de délivrer ou renouveler un passeport ou un document de voyage, indispensable à l'exercice de ce droit.</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <p>Cette perspective, qui revient à considérer l’apatridie de fait en apatridie de droit, serait conforme à l’objectif humanitaire de la Convention de 1954. Pour Félicien*, Salih*, et toutes les personnes dans la même situation, cela signifierait recouvrer la jouissance de plusieurs droits fondamentaux que l’absence de documents d’identité entrave, telle que la liberté de mouvement.</p>
+                    </div>
+                </article>
+                <figure>
+                    <p><i>Félicien*, originaire du Soudan du Sud, vit en Suisse avec un permis B, obtenu après un accident l'ayant rendu paraplégique<sup><a href="#fn49" id="ref49">49</a></sup>. Comme il ne possède aucun document prouvant son origine, l'ambassade soudanaise refuse de lui délivrer un passeport. Les autorités suisses, quant à elles, rejettent sa demande de document de voyage, estimant qu'il n'a pas prouvé avoir tout entrepris pour obtenir un passeport soudanais.</i></p>
+                    <p><i>Salih* a fui l’Érythrée et est arrivé en Suisse à l’âge de 16 ans<sup><a href="#fn50" id="ref50">50</a></sup>. Il refuse de se présenter à l’ambassade érythréenne pour y demander un passeport, car cela signifie risquer de se faire interroger, de mettre en danger ses proches restés au pays et être soumis à l’obligation de payer une taxe au gouvernement qu’il a fui. Faute de passeport, Salih * ne peut pas régulariser son séjour en Suisse et reste coincé, depuis 9 ans, sous le statut de l’admission «provisoire».</i></p>
+                </figure>
+            </section>            
+            <p>Elisa Turtschi, ODAE romand</p>
+        </section>
+        <section id="brèves">
+            <h1>Brèves de l'ODAE romand</h1>
+            <h2>Aide d'urgence: violation des droits de l'enfant</h2>
+            <p>En septembre 2024, la Commission fédérale des migrations (CFM) a publié une étude sur la mise en danger des enfants et des jeunes vivant sous le régime de l’aide d’urgence. L’avis de droit rédigé dans le cadre de cette étude parvient à des conclusions claires: le régime de l’aide d’urgence viole la Convention des Nations Unies relative aux droits de l’enfant ainsi que les dispositions constitutionnelles visant à protéger les enfants et les jeunes.</p>
+            <h2>Regroupement familial: pas d'assouplissement en vue, au contraire</h2>
+            <p>Début septembre 2024, le Conseil des États a rejeté un projet de loi visant à remédier à une inégalité entre les citoyen·nes suisses et les ressortissant·es européens en matière de regroupement familial. La modification aurait permis aux Suissesses et aux Suisses de faire venir leurs parents étranger·ères, sous certaines conditions. La proposition n’a pas convaincu et a été renvoyée au National. De son côté, ce dernier a voté fin septembre le refus pur et simple du regroupement familial pour les personnes détentrices d’un permis F (admission provisoire). Le texte a été renvoyé en commission par la chambre haute pour un nouvel examen.</p>
+            <h2>Agée de 65 ans, le SEM lui retire son permis à cause de se non niveau de français jugé trop bas</h2>
+            <p>Après douze ans de séjour en Suisse, Analyn* bénéficie de l’opération Papyrus qui lui permet d’être régularisée. Le renouvellement de son permis est toutefois conditionné à l’obtention d’un diplôme de français de niveau A2. Malgré le suivi de cours de langue hebdomadaires, Analyn* produit un passeport FIDE de niveau A1. Sans tenir compte des difficultés d’apprentissage liées à son âge (65 ans) et à ses problèmes de santé, le SEM refuse alors la prolongation de son autorisation de séjour et prononce son renvoi de Suisse.</p>
+        </section>
+        <section id="nouvelles">
+            <h1></h1>
+            <h2>L’exposition itinérante “Vieillir en Suisse en tant qu’étranger·ères” a démarré en Valais</h2>
+            <p>Qu’advient-il des travailleur·euses étranger·ères lorsqu’iels vieillissent? Lorsqu’installé·es en Suisse depuis nombre d’années, leurs corps de maçons ou d’employées domestiques ne leur permet plus d’exercer leur travail? Accompagnant le dernier rapport de l’ODAE «Vieillir en Suisse en tant qu’étranger·ères», une exposition itinérante de portraits et de témoignages est présentée en Suisse romande. Après un vernissage à la Chaux-de-Fonds et à Neuchâtel, c’est le canton du Valais qui inaugurait l’expo en septembre.</p>
+            <p>Prochaines dates à retrouver sur notre site: odae-romand.ch/rapport/age_migration</p>
+            <h2>Nouveau projet RADAR: la situation des espaces de garde «Coccinelles» à Genève</h2>
+            <p>L’accès à la garde des enfants de 0 à 4 ans pour les personnes dans l’asile est un sujet souvent peu visible et pourtant crucial. Pour les parents qui se reconstruisent après un parcours migratoire, tout en affrontant les conséquences de la loi sur l’asile suisse, les premières années sont souvent synonymes de cours à suivre, de nombreux rendez-vous médicaux, juridiques ou administratifs. Pour les enfants en âge préscolaire, il s’agit d’apprendre le détachement des parents, la socialisation et bien sûr, le français, pour se préparer au mieux à l’entrée à l’école.</p>
+            <p>Pourtant, sur le canton de Genève, les structures d’accueil, appelées les «Coccinelles», ont vu leurs ressources réduites depuis 2023. Cela a questionné le réseau proche de la Coordination asile.ge et cette dernière a décidé de soutenir différentes initiatives pour défendre leur existence. C’est en collaboration avec celle-ci que l’ODAE romand a réalisé son premier rapport RADAR, une veille de l’accès aux droits des personnes exilées.</p>
+            <h2>Prochain rapport thématique de l’ODAE: le droit à une enfance en famille</h2>
+            <p>Pour l’année 2025, l’ODAE a décidé de se focaliser sur la question de l’enfance et du droit à une vie familiale digne. Comment les lois suisses sur l’asile et sur les étranger·ères impactent-elles les liens entre parents et enfant(s)? Quelle place reste-t-il pour garantir le droit de grandir en famille lorsque les exigences du regroupement familial se durcissent?</p>
+        </section>
+        <section>
+            <p class="cit"><i>Les réfugiés sont des «porteurs de pays»</i></p>
+            <p class="cit_réf">Elias Sanbar</p>
+        </section>
+        <div id="footnotes">
+            <h2>Footnotes</h2>
+            <ol>
+                <li id="fn1">Qui sera suivie par la <a href="https://www.ohchr.org/fr/instruments-mechanisms/instruments/convention-reduction-statelessness">Convention de 1961 sur la réduction des cas d’apatridie</a>. <a href="#ref1">↩</a></li>
+                <li id="fn2">Cette utilisation de la déchéance de nationalité comme sanction a réapparu en France en 2015-2016 suite aux attentats à Paris. Le retrait de la nationalité était déjà une arme brandie par l’extrême droite française dans l’objectif d’empêcher les descendant·es des anciennes colonies françaises d’acquérir la nationalité directement (Saada, Emmanuelle, 2017). <a href="#ref2">↩</a></li>
+                <li id="fn3">Statistiques du SEM relative à la population étrangère en Suisse, décembre 2023. <a href="#ref3">↩</a></li>
+                <li id="fn4">HCR, Résumé et recommandations: l’apatridie en Suisse, 2018, p.4: «La plupart des apatrides reconnus ont une autorisation d’établissement, tandis que les personnes qui relèvent de la catégorie «sans nationalité» ne reçoivent pour la plupart qu’une admission provisoire.».
+                    A lire : <a href="https://www.unhcr.org/dach/wp-content/uploads/sites/27/2018/11/CH_UNHCR-Statelessness_in_Switz-Summary-FRA-screen.pdf">https://www.unhcr.org/dach/wp-content/uploads/sites/27/2018/11/CH_UNHCR-Statelessness_in_Switz-Summary-FRA-screen.pdf</a> <a href="#ref4">↩</a></li>
+                <li id="fn5">Voir le site de l’OSAR: <a href="https://www.osar.ch/themes/asile-en-suisse/les-personnes-avec-des-droits-particuliers/apatridie">https://www.osar.ch/themes/asile-en-suisse/les-personnes-avec-des-droits-particuliers/apatridie</a>. L’OSAR est membre de l’<a href="https://www.statelessness.eu/">European Network on Statelessness (ENS)</a> depuis 2023, un réseau de la société civile qui s'engage à mettre fin à l'apatridie et à garantir la protection des apatrides vivant en Europe. Ce réseau a été créé en 2012 et a pour objectif de sensibiliser à l'apatridie et au droit à une nationalité, de soutenir le développement juridique et politique ainsi que de renforcer la capacité d'action de la société civile. Chaque année, les membres de l'ENS mettent à jour leur <a href="https://index.statelessness.eu/">indice d'apatridie</a> par pays.  <a href="#ref5">↩</a></li>
+                <li id="fn6">ODAE romand, cas n°482, à lire sur odae-romand.ch. <a href="#ref6">↩</a></li>
+                <li id="fn7">ODAE romand, cas n°463, à lire sur odae-romand.ch. <a href="#ref7">↩</a></li>
+                <li id="fn8">Arrêt de la Cour de Justice de l’Union Européenne, «<a href="https://curia.europa.eu/juris/document/document.jsf?text=&docid=287065&pageIndex=0&doclang=FR&mode=req&dir=&occ=first&part=1&cid=1697089">C-563/22</a>», 13.06.2024. <a href="#ref8">↩</a></li>
+                <li id="fn9">ODAE romand, cas n°466, à lire sur odae-romand.ch. <a href="#ref9">↩</a></li>
+                <li id="fn10">Cette comparaison de l’assistance de l’UNRWA à une protection étatique est critiquée par nombre de juristes puisque l’aide de l’agence est limité à une assistance matérielle humanitaire. <a href="#ref10">↩</a></li>
+                <li id="fn11">Citée par Le Goff, Laurent, «<i>On va enfin vivre normalement</i>: A Rennes, la famille palestinienne obtient le statut d’apatride», <i>Ouest France</i>, 4 avril 2024. <a href="#ref11">↩</a></li>
+                <li id="fn12">Celle-ci considère comme réfugiées palestiniennes les personnes qui résidaient au moins deux ans en Palestine avant la guerre de 1948 ; qui ont perdu leurs foyers et leurs moyens d’existence à cause de cette guerre ; qui ont trouvé refuge dans l’une des cinq zones où l’agence opère et qui se sont inscrites auprès d’elles. <a href="#ref12">↩</a></li>
+                <li id="fn13">Amnesty International, «L’apartheid d’Israël contre la population palestinienne: un système cruel de domination et un crime contre l’humanité», 2022. <a href="#ref13">↩</a></li>
+                <li id="fn14">European Statelessness Network, «Palestinian Citizens of Israel Fear Risk of Becoming Stateless Amidst Rising Calls for Citizenship Revocation», 2024. <a href="#ref14">↩</a></li>
+                <li id="fn15">Des cas de déchéance de nationalité ont déjà fréquemment eu lieu. En 2017 par exemple, 2’600 bédouin·es palestiniens ont été déchu·es de leur nationalité israélienne en raison de ce que le gouvernement a décrit comme une «erreur bureaucratique». <a href="#ref15">↩</a></li>
+                <li id="fn16">The Guardian, «Palestinian citizen of Israel granted UK asylum in case said to be unprecedented», 12 mars 2024. <a href="#ref16">↩</a></li>
+                <li id="fn17">Nom donné au déplacement forcé de 1948, qui signifie « catastrophe » en arabe. <a href="#ref17">↩</a></li>
+                <li id="fn18">Agence des Nations unies pour les réfugiés de Palestine au Proche-Orient. <a href="#ref18">↩</a></li>
+                <li id="fn19">Les chiffres de l’UNRWA n’incluent donc pas les personnes qui n’ont jamais été enregistrées, par choix ou parce qu’elles ne remplissaient pas les critères (par exemple parce qu’elles se sont retrouvées réfugiées après 1949 ou parce qu’elles se sont réfugiées dans une zone hors du mandat de l’UNRWA). <a href="#ref19">↩</a></li>
+                <li id="fn20">Bejermi, Aya, «La «nakba» perpétuelle des réfugiés palestiniens», <i>Les Amis du Monde Diplomatique</i>, 2018. <a href="#ref20">↩</a></li>
+                <li id="fn21">Voir EUAA, «Country Guidance : Syria», p.106, 2021, <a href="https://euaa.europa.eu/sites/default/files/Country_Guidance_Syria_2021.pdf">https://euaa.europa.eu/sites/default/files/Country_Guidance_Syria_2021.pdf</a> ; OSAR, «Maktumin», asylwiki, 2020. <a href="#ref21">↩</a></li>
+                <li id="fn22">UNHCR, «<a href="https://www.unhcr.org/sy/stateless-persons">Stateless People – UNHCR Syria</a>».  <a href="#ref22">↩</a></li>
+                <li id="fn23">C’est-à-dire autant pour les personnes qui ont obtenu l'asile en Suisse (permis B), car cela implique la rupture du lien avec le pays d'origine ou de provenance du requérant, mais aussi pour les personnes dont le retour en Syrie est considéré comme inexigible en raison de la situation de violence dans le pays (permis F). <a href="#ref23">↩</a></li>
+                <li id="fn24">ODAE romand, cas n°476, à lire sur odae-romand.ch. <a href="#ref24">↩</a></li>
+                <li id="fn25">Selon la pratique actuelle, ces personnes ne peuvent de toute façon pas être renvoyées en Syrie. Elles restent donc en Suisse, dans la plupart des cas avec un permis F. <a href="#ref25">↩</a></li>
+                <li id="fn26">ODAE romand, cas n°481, à lire sur odae-romand.ch, arrêt du TF «<a href="https://www.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?highlight_docid=aza%3A%2F%2F30-04-2021-2C_415-2020&lang=de&type=show_document&zoom=YES&">2C_415/2020</a>». <a href="#ref26">↩</a></li>
+                <li id="fn27">ODAE romand, cas n°473, à lire sur odae-romand.ch, arrêt du TF «<a href="https://droitpourlapratique.ch/decision/91020/2024">2C_111/2023</a>». <a href="#ref27">↩</a></li>
+                <li id="fn28">OSAR, «Irak: statut légal des personnes réfugiées turques d’origine kurde dans la région autonome du Kurdistan», <i>asylwiki</i>, 2022. <a href="#ref28">↩</a></li>
+                <li id="fn29">ODAE romand, cas n°474, à lire sur odae-romand.ch. <a href="#ref29">↩</a></li>
+                <li id="fn30">Manzotti, Cecilia, «<i>Without a nationality but not stateless</i>», European Network on Statelessness, 2021. <a href="#ref30">↩</a></li>
+                <li id="fn31">En Suisse, c’est notamment le cas des entreprises Lafarge-Holcim (ciment) et ABB (énergie éolienne). <a href="#ref31">↩</a></li>
+                <li id="fn32">Vuagniaux, Ariane, 2021, op. cit. ; Bouzeid, Aminetou Errer, «Western Sahara: From colonial subjects to stateless refugees», Citizenship Rights in Africa Initiative, 2021. <a href="#ref32">↩</a></li>
+                <li id="fn33">Le HCR souligne l’importance de reconnaître tant le statut de réfugié que d’apatride, afin que si le premier n’a plus lieu d’être, la personne bénéficie toujours de la protection du second. En Suisse, jusqu'en 2015 où la jurisprudence a changé, la procédure de détermination de l'apatridie était automatiquement suspendue si la personne avait également déposé une demande d'asile. Source: Bouzeid, Aminetou Errer, «<i>Western Sahara: From colonial subjects to stateless refugees</i>», Citizenship Rights in Africa Initiative, 2021. <a href="#ref33">↩</a></li>
+                <li id="fn34">ODAE romand, cas n°477, à lire sur odae-romand.ch. <a href="#ref34">↩</a></li>
+                <li id="fn35">Vuagniaux, Ariane, «La patrimonialisation culturelle immatérielle interdite: le cas des Sahraouis réfugiés et apatrides», <i>L’Ouest Saharien</i>, 2021/2, vol. 15, p.59. <a href="#ref35">↩</a></li>
+                <li id="fn36">Professeur émérite à l'Université Paris II Panthéon-Assas, président du Conseil d'orientation du Centre de recherche sur les droits de l’homme et le droit humanitaire (CRDH) et président de la Cour de conciliation et d’arbitrage de l’Organisation pour la sécurité et la coopération en Europe (OSCE). <a href="#ref36">↩</a></li>
+                <li id="fn37">Decaux, Emmanuel, « L’apatridie », <i>Pouvoirs</i>, N° 160, 2017, p. 73-84 <a href="#ref37">↩</a></li>
+                <li id="fn38">De Verneuil, Maylis, «L’apatridie rrom en Europe», <i>Plein droit</i>, 128, 2021. <a href="#ref38">↩</a></li>
+                <li id="fn39">Commission européenne, «Un nouveau cadre stratégique de l’UE en faveur des Roms», Fiche d’information, octobre 2020. <a href="#ref39">↩</a></li>
+                <li id="fn40">European Network on Statelessness, «Statelessness and the prohibition on discrimination against romani communities», legal briefing, june 2024. <a href="#ref40">↩</a></li>
+                <li id="fn41">De Verneuil, Maylis, 2021, op. cit. <a href="#ref41">↩</a></li>
+                <li id="fn42">European Network on Statelessness, 2024, op.cit. <a href="#ref42">↩</a></li>
+                <li id="fn43">De Verneuil, Maylis, 2021, op. cit. <a href="#ref43">↩</a></li>
+                <li id="fn44">De Verneuil, Maylis, 2021, op. cit. <a href="#ref44">↩</a></li>
+                <li id="fn45">De Verneuil, Maylis, 2021, op. cit. <a href="#ref45">↩</a></li>
+                <li id="fn46">Manzotti, Cecilia, «Nationality and the right to enter: assessing the impact of refusal of entry for the purpose of statelessness determination», <i>Statelessness and Citizenship Review</i>, 2024. Traduction de l’ODAE romand. <a href="#ref46">↩</a></li>
+                <li id="fn47">Chercheuse doctorante au sein du Département de Droit de l’Université de Sussex. <a href="#ref47">↩</a></li>
+                <li id="fn48">Manzotti, Cecilia, 2024, op. cit. <a href="#ref48">↩</a></li>
+                <li id="fn49">ODAE romand, cas n°479, à lire sur odae-romand.ch <a href="#ref49">↩</a></li>
+                <li id="fn50">ODAE romand, cas n°478, à lire sur odae-romand.ch <a href="#ref50">↩</a></li>
+            </ol>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/d3@7.8.1/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.js"></script>
+    <script>
+        // Using D3 for convenience
+        var main = d3.select("main");
+
+        function initScrollSection(sectionId) {
+            var section = main.select("#" + sectionId);
+            var article = section.select("article");
+            var figure = section.select("figure");
+            var steps = article.selectAll(".step");
+
+            // Initialize scrollama for this section
+            var scroller = scrollama();
+
+            // Resize function to adjust step and figure sizes
+            function handleResize() {
+                var stepH = Math.floor(window.innerHeight * 0.75);
+                steps.style("height", stepH + "px");
+
+                // Calculate the maximum height for the figure based on available space
+                var availableHeight = window.innerHeight * 0.5; // Example: use 50% of the viewport height
+                figure.style("height", availableHeight + "px");
+
+                var img = figure.select("img");
+                img.style("max-height", availableHeight + "px");  // Ensure the image doesn't exceed the available height
+
+                // Resize the scrollama instance
+                scroller.resize();
+            }
+
+            // Handle step enter event
+            function handleStepEnter(response) {
+                // Mark the active step
+                steps.classed("is-active", function (d, i) {
+                    return i === response.index;
+                });
+                
+            }
+
+            // Initialize Scrollama
+            scroller
+                .setup({
+                    step: "#" + sectionId + " article .step",
+                    offset: 0.33,
+                    debug: false,
+                })
+                .onStepEnter(handleStepEnter);
+
+            // Call handleResize initially and on window resize
+            handleResize();
+            window.addEventListener("resize", handleResize);
+        }
+
+        // Initialize each scroll section independently
+        initScrollSection("scrolly");
+        initScrollSection("scrolly-palestine");
+        initScrollSection("scrolly-sahara-01");
+        initScrollSection("scrolly-sahara-02");
+        initScrollSection("scrolly-outro");
+
+    </script>
+</body>
+
+</html>
